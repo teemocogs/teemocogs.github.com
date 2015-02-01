@@ -1,0 +1,490 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	height: 100%;
+}
+
+/*
+ * Masthead/Front Page
+ */
+
+.masthead {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.nav-header {
+	width: 100%;
+	
+}
+
+.nav-header .logo-container {
+    /*logo 背景緞帶*/
+	background-color: #00BAFF;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.nav-header .logo {
+	width: 300px;
+	height: 131px;
+	position: relative;
+	margin: 0 auto;
+}
+.nav-header .logo canvas {
+	width: 300px;
+}
+.nav-header .logo .logo-image {
+	background: url('../images/icon_s.png');
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.nav-header .logo-container canvas {
+	position: absolute;
+	top: -20%;
+	left: 0;
+}
+
+.nav-header .header-menu {
+	width: 100%;
+	padding: 5px 0;
+}
+
+.nav-header .header-menu.stuck {
+	background-image: url("../images/icon_xs.png");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-color: #C9E9FF;
+	transition: background-color .3s ease;
+}
+
+.nav-header .header-menu a {
+	font-family: 'Chau Philomene One', sans-serif;
+	color: #494949;
+	font-size: 130%;
+	text-decoration: none;
+	padding: 1px 25px;
+	line-height: 30px;
+	height: 30px;
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	transition: background-color .2s ease;
+}
+.nav-header .header-menu a:hover {
+	text-decoration: underline;
+	background-color: #C9E9FF;
+}
+.slide-nav canvas {
+  display: none;
+}
+
+
+.masthead div[data-unique] {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.vertical-center {
+  min-height: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/*
+ * Sticky Menu
+ */
+.sticky-menu.stuck {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+/*
+ * General page styles
+ */
+.page {
+	height: 1500px;
+	width: 100%;
+}
+.section-header, .project {
+	position: relative;
+}
+
+/*
+ * Section header
+ */
+.section-header {
+	margin-top: 60px;
+}
+	.section-header .header-blurb {
+    /*Demo 區塊*/
+		padding: 15px;
+		margin: 0;
+		background-color: #C9E9FF;
+	}
+	.section-header h1 {
+		margin: 0;
+		padding: 10px 20px;
+		background: #494949;
+		color: white;
+		font-family: 'Chau Philomene One', sans-serif;
+	}
+
+/*
+ * Projects
+ */
+.project {
+	margin-top: 60px;
+	border: 0 solid #C9E9FF;
+		border-bottom-width: 6px;
+}
+	.project::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 30%;
+		height: 100%;
+		pointer-events: none;
+	}
+	.project h2 {
+		margin: 5px 0 15px 0;
+		width: 100%;
+		text-align: center;
+		font-size: 180%;
+		padding: 2px 8px;
+		display: inline-block;
+		border: 1px dashed #494949;
+		background: #fff;
+		box-shadow: 5px 5px 0px 0px #C9E9FF;
+	}
+	.project h2 a {
+		color: #333;
+	}
+	.project h2 a:hover,
+	.project h2 a:focus,
+	.project h2 a:active {
+		text-decoration: none;
+	}
+	.project .tags-footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		transform: translateY(100%);
+		text-align: center;
+	}
+	.project .tag {
+		display: inline-block;
+		position: relative;
+		background-color: #C9E9FF;
+		padding: 4px 6px 2px 6px;
+		font-weight: bold;
+
+	}
+	.project .tag:before {
+		content: "";
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: #62D9EF;
+		margin-right: 6px;
+	}
+
+.section-links {
+	width: 100%;
+}
+.section-links a {
+	display: block;
+	text-align: center;
+	width: 100%;
+	padding: 6px 15px;
+	color: #494949;
+	transition: background-color .2s ease;
+	font-family: 'Chau Philomene One', sans-serif;
+	font-size: 120%;
+}
+.section-links a:hover,
+.section-links a:active,
+.section-links a:focus {
+	color: #494949;
+	background-color: #C9E9FF;
+}
+
+/*
+ * TOC custom styles
+ */
+.toc-nav {
+	padding-top: 60px;
+}
+.toc-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.toc-nav a {
+	display: block;
+	padding: 5px 10px;
+}
+.toc-h1 {
+	background: #494949;
+}
+.toc-h1 a {
+	color: #fff;
+	font-weight: bold;
+}
+.toc-h1 a:hover,
+.toc-h1 a:focus,
+.toc-h1 a:active {
+	color: #fff;
+	text-decoration: underline;
+}
+.toc-h2 {
+	background: #62D9EF;
+	padding-left: 15px;
+}
+.section-link-0 {
+	background: #62D9EF;
+}
+.section-link-1 {
+	background: #71f1bd;
+}
+.section-link-2 {
+	background: #7ef3c4;
+}
+.section-link-3 {
+	background: #89f5ca;
+}
+.section-link-4 {
+	background: #93f6cf;
+}
+.section-link-5 {
+	background: #9bf7d3;
+}
+.section-link-6 {
+	background: #a2f8d6;
+}
+.section-link-7 {
+	background: #a8f9d9;
+}
+.section-link-8 {
+	background: #adfadb;
+}
+.toc-h2.section-link-0:hover {
+	background: #5eef94;
+}
+.toc-h2.section-link-1:hover {
+	background: #6df1a0;
+}
+.toc-h2.section-link-2:hover {
+	background: #7af3a8;
+}
+.toc-h2.section-link-3:hover {
+	background: #86f5b0;
+}
+.toc-h2.section-link-4:hover {
+	background: #90f6b7;
+}
+.toc-h2.section-link-5:hover {
+	background: #98f7bd;
+}
+.toc-h2.section-link-6:hover {
+	background: #9ff7c1;
+}
+.toc-h2.section-link-7:hover {
+	background: #a5f8c5;
+}
+.toc-h2.section-link-8:hover {
+	background: #aaf9c8;
+}
+
+.toc-h2 a {
+	color: #494949;
+}
+.toc-h2 a:hover,
+.toc-h2 a:focus,
+.toc-h2 a:active {
+	color: #494949;
+	text-decoration: underline;
+}
+.toc-nav.stuck {
+	position: fixed;
+	width: 25%;
+  top: 60px;
+  left: 0;
+  padding: 0 15px;
+}
+.toc-active.toc-h1 {
+	background: #585858;
+}
+.toc-active.toc-h2 {
+	background: #C9E9FF;
+}
+.header-invisible {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#toc-home {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.home-btn-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.home-link {
+	font-family: 'Chau Philomene One', sans-serif;
+	color: #494949;
+	font-size: 130%;
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	line-height: 30px;
+	height: 30px;
+	background: #C9E9FF;
+	border-bottom: 2px solid #494949;
+}
+.home-link:hover,
+.home-link:focus,
+.home-link:active {
+	color: #494949;
+}
+
+.site-img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto 15px auto;
+	box-shadow: 5px 5px 0px 0px #494949;
+}
+
+.github-link {
+	display: inline-block;
+	padding: 6px 15px;
+	text-align: right;
+	width: 100%;
+	background: #62D9EF;
+	color: #494949;
+	transition: background-color .2s ease;
+}
+.github-link::after {
+	content: " \25BA";
+}
+.github-link:hover,
+.github-link:active,
+.github-link:focus {
+	background: #89F5CA;
+	color: #494949;
+}
+
+
+/*
+ * Small size screens
+ */
+@media only screen and (min-width: 768px) {
+
+	.project {
+		padding: 15px;
+	}
+	.project h2 {
+		margin: 5px 0 15px 10%;
+	}
+	.project h2 {
+		width: initial;
+	}
+	.nav-header .logo {
+		width: 293px;
+		height: 295px;
+	}
+	.nav-header .logo canvas {
+		width: 293px;
+	}
+	.nav-header .logo .logo-image {
+		background: url('../images/icon_l.png');
+	}
+	.nav-header .slide-nav {
+	  position: relative;
+	  display: inline-block;
+	  padding: 20px 0;
+	}
+	.slide-nav canvas {
+		display: block;
+	  position: absolute;
+	  top: 0;
+	  pointer-events: none;
+	}
+	.nav-header .header-menu a {
+		margin: 0 0 0 50px;
+		display: inline-block;
+		width: initial;
+		background: #fff;
+	}
+	.nav-header .header-menu a:first-child {
+		margin-left: 0;
+	}
+	.site-img {
+		float: right;
+		margin-left: 20px;
+	}
+	.github-link {
+		display: inline-block;
+		padding: 6px 15px;
+		width: initial;
+	}
+
+	.project .tags-footer {
+		position: absolute;
+		bottom: 0;
+		left: 10%;
+		transform: translateY(100%);
+	}
+	.project .tag {
+    /*skill 區塊*/
+		display: inline-block;
+		position: relative;
+		background-color: #C9E9FF;
+		padding: 4px 6px 2px 6px;
+		font-weight: bold;
+		margin-left: 6px;
+	}
+	.project .tag:before {
+		content: "";
+		display: inline-block;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		background: #62D9EF;
+		margin-right: 6px;
+	}
+
+}
+
+/*
+ * Medium size screens
+ */
+@media only screen and (min-width: 992px) {
+	.home-btn-container {
+		display: none;
+	}
+}
+
+
+
